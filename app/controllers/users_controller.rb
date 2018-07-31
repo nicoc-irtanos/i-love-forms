@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    puts params
     User.create(username: params[:user], email: params[:email], bio: params[:bio])
   end
 end
