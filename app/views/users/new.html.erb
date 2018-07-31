@@ -23,15 +23,15 @@
   <body>
     <h1>S'enregistrer</h1>
 
-    <%= form_tag(method: :post) do %>
+    <%= form_tag url_for('/create'), method: "post" do %>
     <%= label_tag 'Username' %>
-    <%= text_field_tag 'username', @post.username %>
+    <%= text_field_tag :user %>
     <br>
     <%= label_tag 'Email' %>
-    <%= text_field_tag 'email', @post.email %>
+    <%= text_field_tag :email %>
     <br>
     <%= label_tag 'Bio' %>
-    <%= text_area_tag 'bio', @post.bio %>
+    <%= text_area_tag :bio %>
     <br>
     <%= submit_tag "S'enregistrer" %>
 
