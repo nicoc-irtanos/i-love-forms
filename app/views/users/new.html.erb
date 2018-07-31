@@ -1,3 +1,4 @@
+<!--
 <html>
   <head>
     <title>S'enregistrer</title>
@@ -6,7 +7,6 @@
     <h1>S'enregistrer</h1>
     <br>
     <form method="post">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <p>Username :</p>
     <input type="text" name="username">
     <br>
@@ -15,5 +15,26 @@
     <br>
     <p>Ta biographie</p>
     <input type="textarea" name="bio">
+    </form>
+  </body>
+</html>
+-->
+<html>
+  <body>
+    <h1>S'enregistrer</h1>
+
+    <%= form_tag(method: :post) do %>
+    <%= label_tag 'Username' %>
+    <%= text_field_tag 'username', @post.username %>
+    <br>
+    <%= label_tag 'Email' %>
+    <%= text_field_tag 'email', @post.email %>
+    <br>
+    <%= label_tag 'Bio' %>
+    <%= text_area_tag 'bio', @post.bio %>
+    <br>
+    <%= submit_tag "S'enregistrer" %>
+
+    <% end %>
   </body>
 </html>
