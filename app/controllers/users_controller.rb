@@ -8,5 +8,6 @@ class UsersController < ApplicationController
   def create
     # User.create(username: params[:username], email: params[:email], bio: params[:bio])
     # User.create(username: params[:user], email: params[:email], bio: params[:bio])
+    redirect_to('/')
   end
 end
