@@ -23,7 +23,7 @@
   <body>
     <h1>S'enregistrer</h1>
 
-    <%= form_tag url_for('/create'), method: "post" do %>
+    <%= form_tag url_for('new'), method: "post" do %>
     <%= label_tag 'Username' %>
     <%= text_field_tag :user %>
     <br>
